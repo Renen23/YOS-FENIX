@@ -1,0 +1,10 @@
+node_modules/
+database/YOS-FENIX-QR/
+temp/*
+!temp/.gitkeep
+database/users/*
+!database/users/.gitkeep
+*.log
+.env
+.env.*
+!.env.example
