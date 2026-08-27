@@ -81,11 +81,3 @@ await reply('Erro ao abrir o menu.')
 }
 }
 }
-}
-},{})
-} catch(e){
-console.error(e)
-await reply('Erro ao abrir o menu.')
-}
-}
-}
