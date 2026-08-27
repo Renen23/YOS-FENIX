@@ -257,12 +257,12 @@ const info = messages[0]
 
 if (!info.message) return
 
-const senderTemp = info?.key?.participantAlt || info?.key?.remoteJidAlt || conn?.user?.id || info?.key?.participant || info?.key?.remoteJid
-const senderNum = senderTemp?.split('@')[0]
+if (info.key?.fromMe) {
+const botJid = conn?.user?.id?.split(':')[0] || ''
+const botNum = botJid.split('@')[0]
 const donoNum = donoJid?.split('@')[0]
-const isDonoMsg = senderNum === donoNum
-
-if (info.key?.fromMe && !isDonoMsg) return
+if (botNum !== donoNum) return
+}
 
 const pushname = info.pushName || 'Usuário'
 const from = info.key.remoteJid
